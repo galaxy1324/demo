@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Cristal Líquido</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Menú -->
+  <header>
+    <div class="logo">✨ CristalWeb</div>
+    <nav class="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <h1>Bienvenido al Futuro</h1>
+    <p>Explora una experiencia única con un diseño de cristal líquido, colores vibrantes y animaciones que cobran vida.</p>
+    <button>Descubrir más</button>
+  </section>
+
+  <!-- Sección Servicios -->
+  <section id="servicios" class="section">
+    <h2>Nuestros Servicios</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Innovación</h3>
+        <p>Soluciones modernas con estilo único y tecnología avanzada.</p>
+      </div>
+      <div class="card">
+        <h3>Diseño</h3>
+        <p>Un look inspirado en el cristal líquido con colores vibrantes.</p>
+      </div>
+      <div class="card">
+        <h3>Futuro</h3>
+        <p>La combinación perfecta entre estética moderna y funcionalidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Galería -->
+  <section id="galeria" class="section">
+    <h2>Galería</h2>
+    <div class="gallery">
+      <img src="recursos/vecteezy_the-concept-of-a-futuristic-modern-large-digital-city-in-the_33332591.jpg" alt="Imagen 1">
+      <img src="recursos/moda-futurista.jpeg" alt="Imagen 2">
+      <img src="recursos/1.jpg" alt="Imagen 3">
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section">
+    <div class="contact-card">
+      <h2>Contáctanos</h2>
+      <p>¿Tienes un proyecto en mente? Escríbenos y hagamos algo increíble juntos.</p>
+      <form>
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu correo" required>
+        <textarea placeholder="Escribe tu mensaje..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 - Cristal Líquido Web. Todos los derechos reservados.
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: white;
+  background: #0a0a0a;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff66ff;
+}
+
+/* Menú normal */
+.menu {
+  display: flex;
+  gap: 25px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+header:hover .menu {
+  opacity: 1;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #ff99ff;
+}
+
+/* Subrayado animado */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: #ff33cc;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: url("../recursos/2.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #ff99ff;
+  text-shadow: 0 0 20px #ff33cc, 0 0 40px #6600ff;
+}
+
+.hero p {
+  margin: 20px auto;
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(255, 0, 204, 0.6);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.1);
+  background: rgba(51, 51, 255, 0.6);
+}
+
+/* SECCIONES */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffccff;
+}
+
+/* Tarjetas */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  flex: 1 1 280px;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Galería */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Contacto */
+.contact-card {
+  max-width: 500px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-card input,
+.contact-card textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.contact-card button {
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 0, 204, 0.6);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-card button:hover {
+  background: rgba(51, 51, 255, 0.6);
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0,0,0,0.8);
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    color: #fff;
+  }
+}
